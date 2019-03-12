@@ -1,0 +1,22 @@
+body {
+  padding-top: 75px;
+}
+
+nav {
+  font-size:18px;
+}
+.dropdown a {
+  font-size:16px;
+}
+
+#searchbar {
+  width: 47%;
+}
+
+#fixed-search-list {
+  margin: 5%;
+}
+
+.fixed-result-url {
+  color: #006621;
+}

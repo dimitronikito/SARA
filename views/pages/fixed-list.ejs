@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/header %>
+  </head>
+
+  <body class="container-fluid">
+    <%include ../partials/nav %>
+
+    <div class = "jumbotron">
+      <h1> Fixed List Search </h1>
+      <p class = "lead"> Click on the search button to display fixed results </p>
+    </div>
+
+    <div id="searchbar" class="input-group container-fluid">
+        <input type="text" class="form-control input-lg" placeholder="top search engines " disabled>
+      <div class="input-group-btn">
+        <button id="fixed-search-button" class="btn btn-lg btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="fixed-search-list">
+    </div>
+  </body>
+  <footer>
+    <script src = "/js/fixed-list.js"></script>
+  </footer>
+</html>
