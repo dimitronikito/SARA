@@ -10,7 +10,9 @@ nav {
 }
 
 #searchbar {
-  width: 47%;
+  width: 37%;
+  -webkit-transition: width 0.7s ease-in-out;
+  transition: width 0.7s ease-in-out;
 }
 
 #fixed-search-list {
@@ -19,4 +21,14 @@ nav {
 
 .fixed-result-url {
   color: #006621;
+}
+
+#searchbar:hover {
+  width: 47%;
+}
+
+@media only screen and (max-width: 600px){
+  #searchbar{
+    width: 62%;
+  }
 }
