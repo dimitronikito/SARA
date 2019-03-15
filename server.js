@@ -20,25 +20,25 @@ app.get('/search-engine', function(req, res) {
   res.render('pages/Search/search-engine');
 });
 app.get('/navigator', function(req, res) {
-  res.render('/pages/Browser/navigator');
+  res.render('pages/Browser/navigator');
 });
 app.get('/window', function(req, res) {
-  res.render('/pages/Browser/window');
+  res.render('pages/Browser/window');
 });
 app.get('/screen', function(req, res) {
-  res.render('/pages/Browser/screen');
+  res.render('pages/Browser/screen');
 });
 app.get('/location', function(req, res) {
-  res.render('/pages/Browser/location');
+  res.render('pages/Browser/location');
 });
 app.get('/geolocation', function(req, res) {
-  res.render('/pages/Browser/geolocation');
+  res.render('pages/Browser/geolocation');
 });
 app.get('/student-developers', function(req, res) {
-  res.render('/pages/About/student-developers');
+  res.render('pages/About/student-developers');
 });
-app.get('/geolocation', function(req, res) {
-  res.render('/pages/About/contact-us');
+app.get('/contact-us', function(req, res) {
+  res.render('pages/About/contact-us');
 });
 
 
