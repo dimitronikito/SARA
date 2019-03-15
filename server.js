@@ -8,32 +8,38 @@ app.get('/', function(req, res) {
   res.render('pages/index');
 });
 app.get('/fixed-search', function(req, res) {
-  res.render('pages/fixed-list');
+  res.render('pages/Search/fixed-list');
 });
 app.get('/from-file', function(req, res) {
-  res.render('pages/from-file');
+  res.render('pages/Search/from-file');
 });
 app.get('/google-api', function(req, res) {
-  res.render('pages/google-api');
+  res.render('pages/Search/google-api');
 });
 app.get('/search-engine', function(req, res) {
-  res.render('pages/search-engine');
+  res.render('pages/Search/search-engine');
 });
 app.get('/navigator', function(req, res) {
-  res.render('/pages/navigator')
-})
+  res.render('/pages/Browser/navigator');
+});
 app.get('/window', function(req, res) {
-  res.render('/pages/window')
-})
+  res.render('/pages/Browser/window');
+});
 app.get('/screen', function(req, res) {
-  res.render('/pages/screen')
-})
+  res.render('/pages/Browser/screen');
+});
 app.get('/location', function(req, res) {
-  res.render('/pages/location')
-})
+  res.render('/pages/Browser/location');
+});
 app.get('/geolocation', function(req, res) {
-  res.render('/pages/geolocation')
-})
+  res.render('/pages/Browser/geolocation');
+});
+app.get('/student-developers', function(req, res) {
+  res.render('/pages/About/student-developers');
+});
+app.get('/geolocation', function(req, res) {
+  res.render('/pages/About/contact-us');
+});
 
 
 app.use(express.static(path.join(__dirname, 'public')));
