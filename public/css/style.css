@@ -9,12 +9,6 @@ nav {
   font-size:16px;
 }
 
-#searchbar {
-  width: 37%;
-  -webkit-transition: width 0.7s ease-in-out;
-  transition: width 0.7s ease-in-out;
-}
-
 #fixed-search-list {
   margin: 5%;
 }
@@ -25,6 +19,12 @@ nav {
 
 #searchbar:hover {
   width: 47%;
+}
+
+#searchbar {
+  width: 37%;
+  -webkit-transition: width 0.7s ease-in-out;
+  transition: width 0.7s ease-in-out;
 }
 
 @media only screen and (max-width: 600px){
