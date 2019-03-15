@@ -19,6 +19,22 @@ app.get('/google-api', function(req, res) {
 app.get('/search-engine', function(req, res) {
   res.render('pages/search-engine');
 });
+app.get('/navigator', function(req, res) {
+  res.render('/pages/navigator')
+})
+app.get('/window', function(req, res) {
+  res.render('/pages/window')
+})
+app.get('/screen', function(req, res) {
+  res.render('/pages/screen')
+})
+app.get('/location', function(req, res) {
+  res.render('/pages/location')
+})
+app.get('/geolocation', function(req, res) {
+  res.render('/pages/geolocation')
+})
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
