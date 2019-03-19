@@ -44,5 +44,6 @@ app.get('/contact-us', function(req, res) {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(8080);
-console.log('8080 is the magic port');
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
