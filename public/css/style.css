@@ -6,6 +6,10 @@ nav {
   font-size:18px;
 }
 
+footer {
+  padding-bottom: 50px;
+}
+
 
 .dropdown a {
   font-size:16px;
@@ -20,18 +24,18 @@ nav {
 }
 
 #searchbar:hover {
-  width: 47%;
+  /* width: 47%; */
 }
 
 #searchbar {
-  width: 37%;
-  -webkit-transition: width 0.7s ease-in-out;
-  transition: width 0.7s ease-in-out;
+  width: 45%;
+  /* -webkit-transition: width 0.7s ease-in-out;
+  transition: width 0.7s ease-in-out; */
 }
 
 @media only screen and (max-width: 600px){
   #searchbar{
-    width: 62%;
+    /* width: 62%; */
   }
 }
 

@@ -2,13 +2,47 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ../../partials/header %>
+    <link rel="stylesheet" href="/css/from-file.css">
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body class="container-fluid" data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
+    <div class="jumbotron container">
+      <h1> From File Search </h1>
+      <p class = "lead"> Upload a JSON, CSV, or XML file and then use the search bar to search within the file  </p>
+    </div>
+    <div id="input-group" class="container">
+      <div class="row">
+
+        <div class="form-group col-md-6">
+          <p class="lead"> 1) Choose file or drag and drop to upload </p>
+          <input type="file" class="jumbotron" id="upload-file" accept=".csv, .json, .xml">
+        </div>
+
+        <div class="col-md-6">
+          <p class="lead"> 2) Enter a search term </p>
+          <div id="searchbar" class="input-group">
+            <input id="searchinput" type="text" class="form-control input-lg" placeholder="Search here... ">
+            <div class="input-group-btn">
+              <button id="file-search-button" class="btn btn-lg btn-primary">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row" id="results-head"></div>
+      <div class="row container-fluid " id="from-file-results">
+      </div>
+    </div>
+
   </body>
 
   <footer>
     <%include ../../partials/footer %>
+    <script type="text/javascript" src="/js/from-file.js">
+
+    </script>
   </footer>
 </html>

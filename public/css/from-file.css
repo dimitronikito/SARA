@@ -1,0 +1,24 @@
+#upload-file {
+  width:100%;
+  height: 12em;
+  background-image: url("../pictures/upload-drag-drop.png");
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 4px dashed #428bca;
+}
+
+#searchbar {
+  width:100%;
+}
+
+.jumbotron {
+  margin-bottom: 50px;
+}
+
+.error {
+  color: red;
+}
+
+#from-file-results {
+}
