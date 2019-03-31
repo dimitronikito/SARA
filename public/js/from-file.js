@@ -127,6 +127,7 @@ function handleXML(xmlfile, input) {
 
 
 function displayResults(upload) {
+  resultsHead.html("");
   var input = searchbar.val().toLowerCase();
   if (upload.type === ("text/csv")) handleCSV(upload, input);
   else if (upload.type === ("application/json")) handleJSON(upload, input);
