@@ -6,6 +6,26 @@
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
+
+    <div class = "jumbotron navOption">
+      <h1 class = "text-center"> Browser Location </h1>
+      <div class = "content">
+        <p id = "url" class= "text-center"></p>
+        <p id = "domain" class= "text-center"></p>
+        <p id = "path" class= "text-center"></p>
+        <p id = "protocol" class= "text-center"></p>
+      </div>
+    </div>
+
+    <script>
+
+    document.getElementById("url").innerHTML = "Your current URL is " + window.location.href;
+    document.getElementById("domain").innerHTML = "Your domain name is " + window.location.hostname;
+    document.getElementById("path").innerHTML = "Your path name is "+ window.location.pathname;
+    document.getElementById("protocol").innerHTML = "Your protocol is "+ window.location.protocol;
+
+    </script>
+
   </body>
 
   <footer>

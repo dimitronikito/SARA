@@ -6,6 +6,23 @@
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
+
+    <div class = "jumbotron navOption">
+      <h1 class = "text-center"> Browser Window </h1>
+      <div class = "content">
+        <p id = "innerHeight" class= "text-center"></p>
+        <p id = "innerWidth" class= "text-center"></p>
+      </div>
+    </div>
+
+    <script>
+
+    document.getElementById("innerHeight").innerHTML = "Your inner height is " + window.innerHeight + " pixels!";
+    document.getElementById("innerWidth").innerHTML = "Your inner width is " + window.innerWidth + " pixels!";
+
+    </script>
+
+
   </body>
 
   <footer>

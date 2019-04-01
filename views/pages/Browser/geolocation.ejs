@@ -6,6 +6,32 @@
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
+
+    <div class = "jumbotron navOption">
+      <h1 class = "text-center"> Geolocation </h1>
+        <div class = "content text-center">
+          <p class= "text-center">Click the button to get your coordinates.</p>
+          <button type = "button" onclick="geoLocation()" class= "text-center btn btn-danger">Try It</button>
+          <p id="geo" class= "text-center"></p>
+        </div>
+      </div>
+
+    <script>
+
+    var x = document.getElementById("geo");
+
+    function geoLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+
+
   </body>
 
   <footer>

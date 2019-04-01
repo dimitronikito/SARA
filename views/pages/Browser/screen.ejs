@@ -6,6 +6,22 @@
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
+
+    <div class = "jumbotron navOption">
+      <h1 class = "text-center"> Browser Screen </h1>
+      <div class = "content">
+        <p id = "height" class= "text-center"></p>
+        <p id = "width" class= "text-center"></p>
+      </div>
+    </div>
+
+    <script>
+
+    document.getElementById("height").innerHTML = "Your screen height is " + screen.height + " pixels!";
+    document.getElementById("width").innerHTML = "Your screen width is " + screen.width + " pixels!";
+
+    </script>
+
   </body>
 
   <footer>
