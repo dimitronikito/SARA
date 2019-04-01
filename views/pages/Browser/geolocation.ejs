@@ -16,23 +16,23 @@
         </div>
       </div>
 
-    <script>
-
-    var x = document.getElementById("geo");
-
-    function geoLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      }
-    }
-
-    function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-    }
-    </script>
-
-
   </body>
+
+  <script>
+
+  var x = document.getElementById("geo");
+
+  function geoLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  }
+
+  function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+  }
+  </script>
+
 
   <footer>
     <%include ../../partials/footer %>
