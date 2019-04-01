@@ -6,6 +6,36 @@
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
+
+
+    <div class = "jumbotron navOption">
+      <h1 class = "text-center"> Browser Navigator </h1>
+      <div class = "content">
+        <p id = "navigator" class= "text-center"></p>
+        <p id = "product" class= "text-center"></p>
+        <p id = "version" class = "text-center"></p>
+        <p id = "agent" class = "text-center"></p>
+        <p id = "platform" class = "text-center"></p>
+        <p id = "languague" class = "text-center"></p>
+      </div>
+    </div>
+
+    <script>
+
+    document.getElementById("navigator").innerHTML = "Your app name is " + navigator.appCodeName + "!";
+
+    document.getElementById("product").innerHTML = "Your product name is " + navigator.product + "!";
+
+    document.getElementById("version").innerHTML = "Your app version is "+ navigator.appVersion + "!";
+
+    document.getElementById("agent").innerHTML = "Your user agent is "+ navigator.userAgent + "!";
+
+    document.getElementById("platform").innerHTML = "Your platform is "+ navigator.platform + "!";
+
+    document.getElementById("languague").innerHTML = "Your browser languague is "+navigator.language+"!";
+
+    </script>
+
   </body>
 
   <footer>
