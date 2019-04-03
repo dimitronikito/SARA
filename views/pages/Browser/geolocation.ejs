@@ -4,14 +4,14 @@
     <% include ../../partials/header %>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body class="container" data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
 
     <div class = "jumbotron navOption">
       <h1 class = "text-center"> Geolocation </h1>
         <div class = "content text-center">
           <p class= "text-center">Click the button to get your coordinates.</p>
-          <button type = "button" onclick="geoLocation()" class= "text-center btn btn-danger">Try It</button>
+          <button type = "button" onclick="geoLocation()" class= "text-center btn btn-danger">Find Coordinates</button>
           <p id="geo" class= "text-center"></p>
         </div>
       </div>
@@ -25,7 +25,9 @@
   function geoLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
-    }
+    }else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
   }
 
   function showPosition(position) {
