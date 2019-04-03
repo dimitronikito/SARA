@@ -90,6 +90,7 @@ nav a:hover {
   color: black;
 }
 
-.navbar-toggle{
-  color: black;
+.icon-bar {
+  color: black !important;
+  background-color: black !important;
 }

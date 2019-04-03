@@ -9,34 +9,22 @@
 
     <div class = "jumbotron navOption">
       <h1 class = "text-center"> Geolocation </h1>
-        <div class = "content text-center">
-          <p class= "text-center">Click the button to get your coordinates.</p>
-          <button type = "button" onclick="geoLocation()" class= "text-center btn btn-danger">Find Coordinates</button>
-          <p id="geo" class= "text-center"></p>
-        </div>
+    </div>
+
+    <div class = "content text-center">
+      <p class= "text-center">Click the button to get your coordinates.</p>
+      <button type = "button" onclick="geoLocation()" class= "text-center btn btn-danger">Find Coordinates</button>
+      <p id="geo" class= "text-center"></p>
+    </div>
+
+      <div class="text-center" role="status" id = "mapholder" style="padding-bottom:50px">
       </div>
 
   </body>
 
-  <script>
-
-  var x = document.getElementById("geo");
-
-  function geoLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    }else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-  }
-
-  function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-  }
-  </script>
-
-
   <footer>
     <%include ../../partials/footer %>
+    <script type="text/javascript" src="js/geolocation.js">
+    </script>
   </footer>
 </html>
