@@ -6,11 +6,14 @@
   background-color: #be7ed3;
 }
 
+.title {
+  padding: 60px 10px 60px 10px;
+  color: #faf7fc;
+}
 .greeting{
   font-size: 28px;
   padding: 60px 10px 60px 10px;
   color: #faf7fc;
-  font-family: 'Montserrat', sans-serif;
 }
 
 #rig {

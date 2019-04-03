@@ -1,3 +1,6 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 html {
   height: 100%;
 }
@@ -5,16 +8,19 @@ html {
 body {
   min-height: 100%;
   position: relative;
-  padding-bottom: 50px;
-  padding-top: 75px;
-  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 38px;
 }
-
 
 nav {
   font-size:18px;
 }
-
+nav a {
+  color: black;
+}
+nav a:hover {
+  color: black;
+  transition-duration: 1s;
+}
 .dropdown a {
   font-size:16px;
 }
@@ -25,6 +31,11 @@ nav {
 
 .fixed-result-url {
   color: #006621;
+}
+
+.jumbotron {
+  margin-top: 75px;
+  background-color: #faf7fc !important;
 }
 
 #searchbar:hover {
@@ -62,6 +73,8 @@ nav {
 }
 
 .footer{
+  padding-top: 10px;
+  background-color: #faf7fc;
   position: absolute;
   left: 0;
   right: 0;
@@ -71,4 +84,12 @@ nav {
 
 .footer ul li{
   display: inline-block;
+}
+
+#repo a {
+  color: black;
+}
+
+.navbar-toggle{
+  color: black;
 }
