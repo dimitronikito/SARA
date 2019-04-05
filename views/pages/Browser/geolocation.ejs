@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ../../partials/header %>
+    <link rel="stylesheet" href="/css/geo.css">
   </head>
 
   <body class="container" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -12,8 +13,8 @@
     </div>
 
     <div class = "content text-center">
-      <p class= "text-center">Click the button to get your coordinates.</p>
-      <button type = "button" onclick="geoLocation()" class= "text-center btn btn-danger">Find Coordinates</button>
+      <p class= "lead text-center">Click the button to get your coordinates.</p>
+      <button type = "button" onclick="geoLocation()" class= "text-center btn btn-danger btn-lg">Find Coordinates</button>
       <p id="geo" class= "text-center"></p>
     </div>
 

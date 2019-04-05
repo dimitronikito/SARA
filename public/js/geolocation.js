@@ -3,6 +3,7 @@ var x = document.getElementById("geo");
 
 function geoLocation() {
     if (navigator.geolocation) {
+      $("#mapholder").html('<div class="loader" id="loader-2"><span></span><span></span><span></span></div>');
       navigator.geolocation.getCurrentPosition(showPosition);
     }
     else {
