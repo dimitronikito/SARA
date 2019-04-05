@@ -12,11 +12,11 @@ function geoLocation() {
 
 function showPosition(position) {
   var lat=position.coords.latitude;
-  var lon=position.coords.latitude;
+  var lon=position.coords.longitude;
   var latlon = lat + "," + lon;
   x.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lon;
 
-  var img_url ="https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=8&size=400x300&sensor=false&key=AIzaSyDmd1CPGNTCmcH_iSQBQpYHSdBKckL76UQ";
+  var img_url ="https://maps.google.com/maps?q="+latlon+"&t=&z=10&ie=UTF8&iwloc=&output=embed";
 
-  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+  $("#mapholder").html('<iframe src='+img_url+'></iframe>');
 }
