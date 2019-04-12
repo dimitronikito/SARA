@@ -15,7 +15,7 @@ $('#file-search-button').click(function() {
   try {
     displayResults(fileList);
   } catch (ReferenceError) {
-    results.html('<h3 class="error"> please upload a csv, json, or xml file');
+    results.html('<p class="error lead step"> please upload a csv, json, or xml file </p>');
   }
 });
 
@@ -25,9 +25,11 @@ function Data(title, url, description) {
   this.description = description;
 }
 
+var checkBox = "<div class='checkbox'><input type='checkbox'>";
+
 function handleCSV(csvfile, input) {
   results.html("");
-  resultsHead.html("<h3> searching for '" + input + "' in " + csvfile.name + "...</h3>");
+  resultsHead.html("<p class='lead step'> searching for '" + input + "' in " + csvfile.name + "...</p>");
   var csvReader = new FileReader();
 
   csvReader.onload = function(event) {
@@ -45,9 +47,7 @@ function handleCSV(csvfile, input) {
         }
       });
       if (found) {
-        results.append("<h3 class='fixed-result'> <a target='_blank' href=http://www." + parsed[1] + "> " + parsed[0] + " </a> </h3>");
-        results.append("<h4 class='fixed-result-url'>" + parsed[1] + "</h4>");
-        results.append("<p class='lead fixed-result-desc'>" + parsed[2] + "</p>");
+        results.append(checkBox+"<h3 class='fixed-result'> <a target='_blank' href=http://www." + parsed[1] + "> " + parsed[0] + " </a> </h3> <h4 class='fixed-result-url'>" + parsed[1] + "</h4> <p class='lead fixed-result-desc'>" + parsed[2] + "</p></div>");
         found = false;
         count++;
       }
@@ -60,7 +60,7 @@ function handleCSV(csvfile, input) {
 
 function handleJSON(jsonfile, input) {
   results.html("");
-  resultsHead.html("<h3> searching for '" + input + "' in " + jsonfile.name + "...</h3>");
+  resultsHead.html("<p class='lead step'> searching for '" + input + "' in " + jsonfile.name + "...</p>");
   var jsonReader = new FileReader();
 
   jsonReader.onload = function(event) {
@@ -75,9 +75,7 @@ function handleJSON(jsonfile, input) {
         }
       });
       if (found) {
-        results.append("<h3 class='fixed-result'> <a target='_blank' href=http://www." + data[i].url + "> " + data[i].title + " </a> </h3>");
-        results.append("<h4 class='fixed-result-url'>" + data[i].url + "</h4>");
-        results.append("<p class='lead fixed-result-desc'>" + data[i].description + "</p>");
+        results.append(checkBox+"<h3 class='fixed-result'> <a target='_blank' href=http://www." + data[i].url + "> " + data[i].title + " </a> </h3><h4 class='fixed-result-url'>" + data[i].url + "</h4><p class='lead fixed-result-desc'>" + data[i].description + "</p> </div>");
         found = false;
         count++;
       }
@@ -90,7 +88,7 @@ function handleJSON(jsonfile, input) {
 
 function handleXML(xmlfile, input) {
   results.html("");
-  resultsHead.html("<h3> searching for '" + input + "' in " + xmlfile.name + "...</h3>");
+  resultsHead.html("<p class='lead step'> searching for '" + input + "' in " + xmlfile.name + "...</p>");
   var xmlReader = new FileReader();
 
   xmlReader.onload = function(event) {
@@ -112,9 +110,7 @@ function handleXML(xmlfile, input) {
         }
       });
       if (found) {
-        results.append("<h3 class='fixed-result'> <a target='_blank' href=http://www." + url + "> " + title + " </a> </h3>");
-        results.append("<h4 class='fixed-result-url'>" + url + "</h4>");
-        results.append("<p class='lead fixed-result-desc'>" + description + "</p>");
+        results.append(checkBox+"<h3 class='fixed-result'> <a target='_blank' href=http://www." + url + ">" + title + "</a> </h3><h4 class='fixed-result-url'>" + url + "</h4><p class='lead fixed-result-desc'>" + description + "</p> </div>");
         found = false;
         count++;
       }
