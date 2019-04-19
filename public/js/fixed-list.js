@@ -19,11 +19,11 @@ var yandex = new searchEngine("Yandex", "https://yandex.com/", "If you're aiming
 
 var searchEngines = [google, bing, yahoo, ask, aol, duck, wolframalpha, archive, baidu, yandex];
 
+var checkBox = "<div class='checkbox'><input type='checkbox'>";
+
 function fixedResults(arr) {
   for (i in searchEngines) {
-    fixed.append("<h3 class='fixed-result'> <a target='_blank' href='" + searchEngines[i].url + "'> " + searchEngines[i].title + " </a> </h3>");
-    fixed.append("<h4 class='fixed-result-url'>" + searchEngines[i].url + "</h4>");
-    fixed.append("<p class='lead fixed-result-desc'>" + searchEngines[i].description + "</p>");
+    fixed.append(checkBox + "<h3 class='fixed-result'> <a target='_blank' href='" + searchEngines[i].url + "'> " + searchEngines[i].title + " </a> </h3><h4 class='fixed-result-url'>" + searchEngines[i].url + "</h4><p class='lead fixed-result-desc'>" + searchEngines[i].description + "</p> </div>");
   }
 }
 

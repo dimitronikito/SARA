@@ -56,7 +56,7 @@ function downloadJSON(arr) {
 }
 
 function JSONtoXML(obj) {
-  xml = '<results> \n';
+  xml = '<?xml version="1.0" encoding="UTF-8"?> \n<results> \n';
   for (var i = 0; i < obj.length; i++) {
     xml += "<result> \n";
     for (var prop in obj[i]) {
