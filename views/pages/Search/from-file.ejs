@@ -9,18 +9,18 @@
     <%include ../../partials/nav %>
     <div class="jumbotron container">
       <h1> From File Search </h1>
-      <p class = "lead"> Download search results from an uploaded JSON, CSV, or XML file  </p>
+      <p class = "lead"> Upload a CSV, JSON, or XML file and download your desired search results  </p>
     </div>
     <div id="input-group" class="container">
       <div class="row" style="margin-bottom: 30px">
 
         <div style="margin-bottom: 30px" class="form-group col-md-6">
-          <p class="lead step"> 1) Choose file or drag and drop to upload </p>
+          <p class="lead step"> 1) Upload! </p>
           <input type="file" class= "well-lg" id="upload-file" accept=".csv, .json, .xml">
         </div>
 
         <div class="col-md-6">
-          <p class="lead step"> 2) Enter a search term or leave empty for full data</p>
+          <p class="lead step"> 2) Search! </p>
           <div id="searchbar" class="input-group">
             <input id="searchinput" type="text" class="form-control input-lg" placeholder="Search here... ">
             <div class="input-group-btn">
@@ -40,19 +40,10 @@
           <div style="margin-bottom: 30px" class="row container-fluid " id="search-results">
           </div>
         </div>
-        <div id="download-results" style="margin-bottom: 30px" class = "col-md-6">
-            <p class="lead step"> 3) Choose a file format to download checked results </p>
-            <div class="text-center input-group-btn">
-              <button id="download-csv" class="download btn btn-lg btn-success" onclick="download('csv')">
-                <p> CSV </p> <i class="fas fa-arrow-circle-down"></i>
-              </button>
-              <button id="download-json" class="download btn btn-lg btn-warning" onclick="download('json')">
-                <p> JSON </p> <i class="fas fa-arrow-circle-down"></i>
-              </button>
-              <button id="download-xml" class="download btn btn-lg btn-danger" onclick="download('xml')">
-                <p> XML </p> <i class="fas fa-arrow-circle-down"></i>
-              </button>
-            </div>
+        <div style="margin-bottom: 30px" class = "col-md-6">
+            <p class="lead step"> 3) Download!
+            </p>
+            <%include ../../partials/download %>
           </div>
         </div>
       </div>

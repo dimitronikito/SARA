@@ -110,19 +110,23 @@ function download(format) {
     resultArr[i] = new result(title, url, desc);
   });
 
-  switch(format) {
-    case 'csv':
-      downloadCSV(resultArr);
-      break;
-    case 'json':
-      downloadJSON(resultArr);
-      break;
-    case 'xml':
-      JSONtoXML(resultArr);
-      downloadXML(xml);
-      break;
-    default:
-      null;
-    }
+  if (resultArr.length > 0) {
+    $("#download-head").html('<p class = "lead"> download in csv, json, or xml formats! </p>');
+    switch(format) {
+      case 'csv':
+        downloadCSV(resultArr);
+        break;
+      case 'json':
+        downloadJSON(resultArr);
+        break;
+      case 'xml':
+        JSONtoXML(resultArr);
+        downloadXML(xml);
+        break;
+      default:
+        null
+      }
+  }
+  else $("#download-head").html('<p class = "lead error"> check off at least 1 result! </p>');
 
 }
