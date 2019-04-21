@@ -1,4 +1,4 @@
-var $results = $("#from-file-results");
+var $results = $("#search-results");
 
 function result(title, url, description) {
   this.title = title;

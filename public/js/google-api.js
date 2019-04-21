@@ -3,7 +3,7 @@ var custom_search_key = "AIzaSyC_YJay-YFw2HJJ4yW-OUNCKPcvwaXjSeo";
 var url = "https://www.googleapis.com/customsearch/v1";
 var cx = '010899884897236485615:zcnahc-yrs8';
 
-var resultshtml = $("#google-search-list");
+var resultshtml = $("#search-results");
 
 function Data(title, url, description) {
   this.title = title;

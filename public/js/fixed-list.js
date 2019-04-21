@@ -1,4 +1,4 @@
-var fixed = $("#fixed-search-list");
+var fixed = $("#search-results");
 
 function searchEngine(title, url, description) {
   this.title = title;

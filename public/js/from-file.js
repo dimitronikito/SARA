@@ -1,6 +1,6 @@
 var file = document.getElementById("upload-file");
 var searchbar = $('#searchinput');
-var results = $('#from-file-results');
+var results = $('#search-results');
 var resultsHead = $('#results-head');
 
 var count = 0;
@@ -47,7 +47,7 @@ function handleCSV(csvfile, input) {
         }
       });
       if (found) {
-        results.append(checkBox+"<h3 class='fixed-result'> <a target='_blank' href=http://www." + parsed[1] + "> " + parsed[0] + " </a> </h3> <h4 class='fixed-result-url'>" + parsed[1] + "</h4> <p class='lead fixed-result-desc'>" + parsed[2] + "</p></div>");
+        results.append(checkBox+"<h3 class='result'> <a target='_blank' href=http://www." + parsed[1] + "> " + parsed[0] + " </a> </h3> <h4 class='result-url'>" + parsed[1] + "</h4> <p class='lead result-desc'>" + parsed[2] + "</p></div>");
         found = false;
         count++;
       }
@@ -75,7 +75,7 @@ function handleJSON(jsonfile, input) {
         }
       });
       if (found) {
-        results.append(checkBox+"<h3 class='fixed-result'> <a target='_blank' href=http://www." + data[i].url + "> " + data[i].title + " </a> </h3><h4 class='fixed-result-url'>" + data[i].url + "</h4><p class='lead fixed-result-desc'>" + data[i].description + "</p> </div>");
+        results.append(checkBox+"<h3 class='result'> <a target='_blank' href=http://www." + data[i].url + "> " + data[i].title + " </a> </h3><h4 class='result-url'>" + data[i].url + "</h4><p class='lead result-desc'>" + data[i].description + "</p> </div>");
         found = false;
         count++;
       }
@@ -110,7 +110,7 @@ function handleXML(xmlfile, input) {
         }
       });
       if (found) {
-        results.append(checkBox+"<h3 class='fixed-result'> <a target='_blank' href=http://www." + url + ">" + title + "</a> </h3><h4 class='fixed-result-url'>" + url + "</h4><p class='lead fixed-result-desc'>" + description + "</p> </div>");
+        results.append(checkBox+"<h3 class='result'> <a target='_blank' href=http://www." + url + ">" + title + "</a> </h3><h4 class='result-url'>" + url + "</h4><p class='lead result-desc'>" + description + "</p> </div>");
         found = false;
         count++;
       }
