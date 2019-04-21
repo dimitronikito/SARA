@@ -4,11 +4,43 @@
     <% include ../../partials/header %>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body class="container-fluid" data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
-  </body>
 
+    <div class = "jumbotron">
+      <h1> Google API Search </h1>
+      <p class = "lead"> Search Google with the searchbar! </p>
+    </div>
+
+    <div id="searchbar" class="input-group container-fluid">
+        <input id="query" type="text" class="form-control input-lg" placeholder="Search... ">
+      <div class="input-group-btn">
+        <button id="google-search-button" class="btn btn-lg btn-primary" onclick="googleSearch()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="google-search-list">
+    </div>
+
+    <div id="download-results" style='margin: 30px' class="col-md-12">
+      <div class="text-center input-group-btn">
+        <button id="download-csv" class="download btn btn-lg btn-success" onclick="download('csv')">
+          <p> CSV </p> <i class="fas fa-arrow-circle-down"></i>
+        </button>
+        <button id="download-json" class="download btn btn-lg btn-warning" onclick="download('json')">
+          <p> JSON </p> <i class="fas fa-arrow-circle-down"></i>
+        </button>
+        <button id="download-xml" class="download btn btn-lg btn-danger" onclick="download('xml')">
+          <p> XML </p> <i class="fas fa-arrow-circle-down"></i>
+        </button>
+      </div>
+    </div>
+  </body>
   <footer>
     <%include ../../partials/footer %>
+    <script type="text/javascript" src="js/google-api.js"></script>
+    <script type="text/javascript" src="js/download.js"></script>
   </footer>
 </html>

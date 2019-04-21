@@ -23,7 +23,7 @@ var checkBox = "<div class='checkbox'><input type='checkbox'>";
 
 function fixedResults(arr) {
   for (i in searchEngines) {
-    fixed.append(checkBox + "<h3 class='fixed-result'> <a target='_blank' href='" + searchEngines[i].url + "'> " + searchEngines[i].title + " </a> </h3><h4 class='fixed-result-url'>" + searchEngines[i].url + "</h4><p class='lead fixed-result-desc'>" + searchEngines[i].description + "</p> </div>");
+    fixed.append(checkBox + "<h3 class='result'> <a target='_blank' href='" + searchEngines[i].url + "'> " + searchEngines[i].title + " </a> </h3><h4 class='result-url'>" + searchEngines[i].url + "</h4><p class='lead result-desc'>" + searchEngines[i].description + "</p> </div>");
   }
 }
 
