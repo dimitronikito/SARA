@@ -94,6 +94,10 @@ nav a:hover {
   color: black;
 }
 
+#searchbar {
+  width: 90%;
+}
+
 .icon-bar {
   color: black !important;
   background-color: black !important;

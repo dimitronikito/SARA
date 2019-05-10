@@ -15,6 +15,7 @@ var checkBox = "<div class='checkbox'><input type='checkbox'>";
 
 function googleSearch() {
   var input = $('#query').val();
+
   $.ajax({
     dataType:"json",
     type: "GET",
@@ -27,6 +28,7 @@ function googleSearch() {
         results[i] = new Data(data[i].title, data[i].link, data[i].snippet);
 
         resultshtml.append(checkBox + "<h3 class='result'> <a target='_blank' href='" + results[i].url + "'> " + results[i].title + " </a> </h3><h4 class='result-url'>" + results[i].url + "</h4><p class='lead result-desc'>" + results[i].description + "</p> </div>");
+
       }
     },
     error: function(xhr) {

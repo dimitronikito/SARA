@@ -4,11 +4,51 @@
     <% include ../../partials/header %>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body class="container" data-spy="scroll" data-target=".navbar" data-offset="50">
     <%include ../../partials/nav %>
+
+    <div class = "jumbotron">
+      <h1> Custom Search Engine </h1>
+      <p class = "lead"> Populate the database and then search through it </p>
+    </div>
+
+    <div style="padding-bottom: 50px"  class = 'container row'>
+
+      <div class = "col-md-6 text-center">
+        <h2> Populate Database </h2>
+        <div id="searchbar" class="input-group container-fluid">
+            <input id="populate" type="text" class="form-control input-lg" placeholder="Populates with results from google " autocomplete="off">
+          <div class="input-group-btn">
+            <button id="google-search-button" class="btn btn-lg btn-info" onclick="populateDB()">
+              <i class="fa fa-database" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class = "col-md-6 text-center">
+        <h2> Search Database </h2>
+        <div id="searchbar" class="input-group container-fluid">
+          <input id="query" type="text" class="form-control input-lg" placeholder="Search... " autocomplete="off">
+          <div class="input-group-btn">
+            <button id="google-search-button" class="btn btn-lg btn-primary" onclick="searchDB()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "container-fluid" id ="results">
+    </div>
+
+    <%include ../../partials/download %>
+
   </body>
 
   <footer>
     <%include ../../partials/footer %>
+      <script type="text/javascript" src="js/search-engine.js"></script>
+      <script type="text/javascript" src="js/download.js"></script>
   </footer>
 </html>

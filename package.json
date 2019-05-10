@@ -4,6 +4,8 @@
     "dependencies": {
         "ejs": "^2.5.5",
         "express": "^4.6.1",
+        "mongodb": "^3.2.3",
+        "mongoose": "^5.5.5",
         "nodemon": "^1.18.10"
     }
 }
